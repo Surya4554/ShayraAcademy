@@ -85,6 +85,6 @@ mongoose.connect('mongodb://localhost/coaching', ()=> {
 
 })
 
-app.listen(process.env.PORT | 5556, () => {
+app.listen(process.env.PORT || 5556, () => {
     console.log("server start");
 })  
