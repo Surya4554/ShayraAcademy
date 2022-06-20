@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+      {{>navbar data = details}}
+    
+      <section class="gallery py-5">
+        <div class="container">
+          <h2 class="text-center">Some Events Happens in Our Academy</h2>
+          <p class="mb-5">An event can be described as a public assembly for the purpose of celebration, education, marketing or reunion. Events can be classified on the basis of their size, type and context. Events that are organized to celebrate cultural heritage and traditions are known as cultural events. These are high community involvement events. Festivals and religious occasions come into the categories of cultural events. Events that are held on every personal level for family and friends are known as personal events. These kinds of events are mainly organized to celebrate and cherish a personal occasion with the known peoples. So mostly attendees are either invited or the part of the group who are organizing these types of events.</p>
+          <div class="row">
+            {{#each galleries}}
+            <div class="col-md-4 mb-2">
+               <div><img src="{{this.url}}" class="img-fluid" alt="Img"></div>
+            </div>
+
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+      {{>footer data = details }}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

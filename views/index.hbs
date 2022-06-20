@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+      {{>navbar data = details }}
+      {{>slider slides = slides}}
+
+      <section class="banner1 my-5 py-5 background1">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <h2 class="text-center fw-bolder">Start Preparation With New Pedalogy.</h2>
+                      <p>We are providing you a best class facility, faculty, classrooms etc. We are catching your weakness point and trend according your weakness.We are here to achieve you a successful man in your life. We know only education not became you successful so we provide you other activity..</p>
+                      <button class="btn border-white fw-bolder text-white btn-outline-secondary">Explore More</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="services-section" class="py-3">
+          <div class="container">
+              <h2 class="text-center text-secondary fw-bolder">All Courses that Provide by Us.</h2>
+              <div class="row mt-4">
+                {{#each services}}
+                  <div class="col-md-4 mb-4">
+
+                      <div class="card">
+                        <div class="container-fluid mt-4 w-25"><img src="{{this.icon}}" class="card-img-top rounded-circle" alt="Img"></div>
+                        <div class="card-body">
+                            <h2 class="card-title text-center fw-bolder text-danger title"> {{this.title}}</h2>
+                            <h5 class="text-center"><button type="button" class="btn background1 text-white fw-bolder mx-4 fw-bolder" disabled>Validity : {{this.validity}} </button></h5>
+                            <h5 class="card-subtitle fw-bold"> {{this.subTitle}} </h5>
+                            <p class="card-text"> {{this.description}} </p>
+                            <button type="button" class="btn btn-outline-secondary text-danger mx-4 fw-bolder" disabled> {{this.price}} </button>
+                            <button type="button" class="btn btn-outline-secondary mx-4 fw-bolder"> {{this.buy}} </button>
+                        </div>
+                      </div>
+
+                  </div>
+                  {{/each}}
+              </div>
+          </div>
+      </section>     
+
+      <section class="banner2 mt-5">
+          <div class="container">
+              <h1 class="text-center mb-5 fw-bolder text-secondary">The Goals You want to Achieve.</h1>
+              <div class="row">
+                  <div class="col-md-5">
+                      <h2 class="fw-bold">Let's crack Your Goal Exams together. We are trusted by over 1 Millions+ Students.</h2>
+                      <p>We are a fastly growing community. We are taking our platform online and sharing some of our students' achievements in the section above, we are dedicated towards students who trust us.</p>
+                      <button class="btn btn-outline-secondary fw-bolder">Join Our Student Community</button>
+                  </div>
+                  <div class="col-md-7 ban2-padding">
+                      <img src="/static/images/ban2.webp" style="height:100%; width:100%; object-fit:cover" alt="Image">
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="banner2 mt-5">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-5 ban2-padding">
+                      <img src="/static/images/ban3.webp" style="height:100%; width:100%; object-fit:cover" alt="Image">
+                  </div>
+                  <div class="col-md-7">
+                      <h2 class="fw-bold text-secondary">Frequently Asked Questions</h2>
+                      <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    I am unable to make payment for the class.
+                                </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"> In case of transaction failure after amount deduction either access to the purchased product will be provided within few hours or we request the student to wait for 3 to 4 working days. The money will be credited back to his/her account.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    What are the benefits of the Subscription ?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Here you will get access to test series and quizzes by top Educators. This will evaluate your learning and measure your progress.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    What are all the payment methods allowed to buy a plan ?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">You can pay using: Credit Card/ Debit Card or Through: UPI and Netbanking.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    How long will it take for my account to be activated once the payment is made ?
+                                </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Once the payment is made, your account will be activated right away.</div>
+                                </div>
+                            </div>
+                            </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section id="contact-us" class="py-5 background1">
+        <div class="container">
+            <h2 class="text-center fw-bolder text-white mb-5">Any Query Feel Free to Contact Us</h2>
+            <div class="row">
+                <div >
+                     <form class="row g-3" action="/process-contact-form" method="post">
+                            
+                            <div class="col-md-6">
+                                <input name="firstName" type="text" class="form-control" id="inputfirstname4" placeholder="Enter Your First Name" required>
+                            </div>
+                            <div class="col-md-6">
+                               <input name="lastName" type="text" class="form-control" id="inputlastname4" placeholder="Enter Your Last Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input name="email" type="email" class="form-control" id="inputEmail4" placeholder="Enter Your Email ID" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input name="number" type="text" class="form-control" id="inputnumber4" placeholder="Enter Your Contact Number" required>
+                            </div>
+                            <div class="col-md-6">
+                                <select name="course" id="inputState" class="form-select">
+                                <option selected>Choose Your Course</option>
+                                <option>IIT JEE</option><option>KVPY</option><option>OLYMPIAD</option>
+                                <option>NEET</option><option>NIMCET</option><option>NTSE</option><option>NDA</option>
+                                <option>Class 12</option><option>Class 11</option><option>Class 10</option>
+                                <option>Class 9</option><option>Others</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <select name="year" id="inputState" class="form-select">
+                                <option selected>Choose Your Preparation Year</option>
+                                <option>2021 - 2022</option><option>2022 - 2023</option><option>2023 - 2024</option><option>2024 - 2025</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label text-white fw-bold">Address</label>
+                                <input name="address" type="text" class="form-control" id="inputAddress" placeholder="Enter Your Current Address" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label text-white fw-bold">State</label>
+                                <input name="state" type="text" class="form-control" id="inputCity" placeholder="Enter Your State" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputState" class="form-label text-white fw-bold">Country</label>
+                                <input name="country" type="text" class="form-control" id="inputCity" placeholder="Enter Your Country" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label fw-bold text-white">Write Your Problem / Question</label>
+                                <textarea name="query" class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Enter Your Question / Problem" required></textarea>
+                            </div>
+                            <div class="container text-center">
+                                <button type="submit" class="btn fw-bold border-white text-white btn-outline-secondary">Submit Now</button>
+                            </div>
+                     </form>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-us py-5">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-12 mb-5">
+                    <h2 class="fw-bolder text-secondary">Who We Are</h2>
+                    <p>Shayra Academy, which means a driving force, has strong foundations and deep roots. Shayra Academy has been able to consistently demonstrate excellence through its results. It started way back in 2021 through our classroom courses and has expanded many folds in all these years. At Impetus we offer a wide gamut of courses in various fields. The objective is to provide quality education and make it easily accessible to all students. With this objective we have now ventured into online video tutorials, so that we can touch base with students in every nook and corner. In addition to the class -room teaching which is available at our head office in Varanasi (U.P.), we have expanded across globe, touching students in various countries, through the means of Online video tutorials.
+                     <br><br>
+                    At Shayra Academy we aims to educate students and make learning easy and affordable for them. Shayra Academy nurtures aspirations and facilitate continuous learning to realize individual potential and growth. Our product and services encourages a positive attitude, enhances knowledge and builds relevant skills. We are driven by our core values of being a Mentor, Motivator and Guide. Shayra Academy provides its students with a direction and grooms their innate personalities. It not only coaches students to crack various entrance exams but it teaches them the way of living.
+                     <br><br>
+                    This site provides huge range of video lectures in the fields of Physics, Chemistry, Biology and Higher Mathematics, Quantitative Aptitude, Logical Reasoning, Data Interpretation, Solution of previous year actual test papers, etc. There are methods/ short tricks for solving questions in lesser time, which is very useful from competitive exam’s perspective. In order to strengthen the fundamental concepts of students,we ensure that every topic is covered from its basics to advance level. We have the best teachers who are master of their subjects because we believe that great learning starts with great teaching. We emphasize on innovative ways of learning, also you will find amazing methods of solving complicated questions in a very simple way. Explanations provided in the videos will help you refine your test taking skills.
+                    </p>
+                </div>
+                  <div class="col-md-3 ban2-padding">
+                      <img src="/static/images/Suraj6.png" style="height:100%; width:100%; object-fit:cover" alt="Image">
+                  </div>
+                  <div class="col-md-9">
+                      <h2 class="fw-bolder text-secondary">Our Mission</h2>
+                      <p>Our Mission at Shayra Academy is to provide easy access to quality education. With this objective we have ventured into online video tutorials, so that we can touch base with students across the globe. We believe that everyone deserve access to world class education. Through online tutorials we are offering our students wide range of courses and are also helping students save their crucial time. We are working towards ourmission so that Impetus evolves as best place for learning in the world!</p>
+                      <h2 class="fw-bolder text-secondary">Er. Surya kumar Surya</h2>
+                      <p>Surya kumar Surya is a well-known name in India in the area of Mathematics. He is MCA in Computer Application and has more than 5+ years of experience in professional teaching. He is an effective communicator with excellent teaching skills. He is highly self-motivated & result oriented mentor having strong analytical, problem solving & organizational abilities. He has been coaching students for IIT-JEE, MBA, MCA, NDA and various other competitive examinations. Besides he also provides career guidance, placement training and motivational counselling to students.</p>
+                      <button class="btn btn-outline-secondary fw-bolder">Explore More !</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      {{>footer data = details}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
